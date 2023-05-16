@@ -1,0 +1,15 @@
+[main] INFO  com.hostelmgm.App  - Hello World!
+  [main] INFO  com.hostelmgm.App  - 		*******Welcome to Hostel Management********
+  [main] INFO  com.hostelmgm.App  - 					*******Welcome to Hostel Management********
+  [main] INFO  com.hostelmgm.App  - 					*******Welcome to Hostel Management********
+  [main] INFO  com.hostelmgm.App  - 					*******Welcome to Hostel Management********
+  [main] INFO  com.hostelmgm.App  - 
+Press 1 for Registration 
+ Press 2 for Login
+  [main] INFO  serviceImpl.loginnregisterImpl  - Welcome to registration
+  [main] INFO  com.hostelmgm.App  - 					*******Welcome to Hostel Management********
+  [main] INFO  com.hostelmgm.App  - 
+Press 1 for Registration 
+ Press 2 for Login
+  [main] INFO  serviceImpl.loginnregisterImpl  - welcome to login
+  
