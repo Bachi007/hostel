@@ -1,6 +1,9 @@
 package com.hostelmgm;
 
 import org.apache.log4j.Logger;
+
+import exception.globalException;
+
 import java.util.*;
 import serviceImpl.*;
 /**
@@ -12,7 +15,7 @@ public class App
 	static Logger log=Logger.getLogger(App.class);
 	static Scanner bs=new Scanner(System.in);
 	static loginnregisterImpl ln=new loginnregisterImpl();
-    public static void main( String[] args )
+    public static void main( String[] args )throws globalException 
     {
         log.info( "\t\t\t\t\t*******Welcome to Hostel Management********" );
         

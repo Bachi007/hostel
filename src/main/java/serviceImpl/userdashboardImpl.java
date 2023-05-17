@@ -1,32 +1,19 @@
 package serviceImpl;
 
+import org.apache.log4j.Logger;
+
 import service.userdashboard;
 
 public class userdashboardImpl  implements userdashboard{
 
-	@Override
-	public void changePassword() {
-		// TODO Auto-generated method stub
-		
-	}
+	static Logger log=Logger.getLogger(userdashboardImpl.class);
 
 	@Override
-	public void updatePhone() {
-		// TODO Auto-generated method stub
+	public void userdashboard() {
+		log.info("\t\t\t\t*****welcome to user dashboard*****");
 		
 	}
-
-	@Override
-	public void viewRoom() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void viewFee() {
-		// TODO Auto-generated method stub
-		
-	}
+	
 	
 	
 
