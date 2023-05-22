@@ -18,7 +18,7 @@ public class admindashboardImpl implements admindashboard {
 		log.info("\t\t\t\t*****welcome to admin dashboard*****");
 		int ch=5;
 		while(ch!=0) {
-			log.info("Press 1 for Create Room\nPress 2 for view users\nPress 3 for view Rooms\nPress 4 to allot the room\nPress 0 to exit ");
+			log.info("Press 1 for Create Room\nPress 2 for view users\nPress 3 for view Rooms\nPress 4 to allot the room\nPress 5 for delete User\nPress 6 for delee room\nPress 7 for add due amount\nPress 8 for update due amount\nPress 9 for view user\nPress 0 to exit ");
 			
 			log.info("Enter your choice of Operation");
 			ch=sc.nextInt();
@@ -29,6 +29,11 @@ public class admindashboardImpl implements admindashboard {
 			case 2->impl.viewUsers();
 			case 3->impl.viewRooms();
 			case 4->impl.allotRoom();
+			case 5->impl.deleteUser();
+			case 6->impl.deleteRoom();
+			case 7->impl.addDueAmount();
+			case 8->impl.addpaidDueAmount();
+			case 9->impl.viewUser();
 			}
 				
 		}
@@ -86,6 +91,72 @@ public class admindashboardImpl implements admindashboard {
 			log.info("room allotted successfully");
 		}
 		
+	}
+	@Override
+	public void deleteUser() {
+		
+		log.info("enter user id to delet");
+		int uid=sc.nextInt();
+		int res=dao.deleteUser(uid);
+		if(res==1) {
+			log.info("deleted successfully");
+		}
+		else {
+			log.info("something went wrong");
+		}
+		
+	}
+	@Override
+	public void deleteRoom() {
+		log.info("enter room id to delet");
+		int rid=sc.nextInt();
+		int res=dao.deleteRoom(rid);
+		if(res==1) {
+			log.info("deleted successfully");
+		}
+		else {
+			log.info("something went wrong");
+		}
+			
+	}
+	@Override
+	public void addDueAmount() {
+		
+		log.info("Enter user id");
+		int uid=sc.nextInt();
+		log.info("Enter amount to add");
+		int amount=sc.nextInt();
+		
+		int res=dao.addDueAmount(uid, amount);
+		if(res==1) {
+			log.info("amount added");
+		}
+		else {
+			log.info("something went wrong");
+		}
+	}
+	@Override
+	public void addpaidDueAmount() {
+		log.info("Enter user id");
+		int uid=sc.nextInt();
+		log.info("Enter amount to add");
+		int amount=sc.nextInt();
+		
+		int res=dao.paidDueAmount(uid, amount);
+		if(res==1) {
+			log.info("amount added");
+		}
+		else {
+			log.info("something went wrong");
+		}
+	}
+	@Override
+	public void viewUser() {
+		log.info("Enter user id to view");
+		int uid=sc.nextInt();
+		
+	user u1=	dao.viewUserProfile(uid);
+		log.info(u1);
 	}
 
 }

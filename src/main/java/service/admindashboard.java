@@ -13,5 +13,15 @@ public interface admindashboard {
 	public void viewRooms();
 	
 	public void allotRoom();
+	
+	public void deleteUser();
+	
+	public void deleteRoom();
+	
+	public void addDueAmount();
+	
+	public void addpaidDueAmount();
+	
+	public void viewUser();
 }
 
