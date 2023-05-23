@@ -147,9 +147,6 @@ try(Session ses=hibernateUtil.getSession()){
 	@Override
 	public user viewUserProfile(int userId) {
 		
-		
-		
-		
 		try(Session ses=hibernateUtil.getSession())
 		{
 			user u1=null;

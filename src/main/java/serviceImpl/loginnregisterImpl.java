@@ -72,7 +72,7 @@ public class loginnregisterImpl implements loginnregister {
 			adminda.dashboard();
 		}
 		else {
-			userda.userdashboard();
+			userda.userdashboard(u2.getUserId());
 		}
 		
 	}
